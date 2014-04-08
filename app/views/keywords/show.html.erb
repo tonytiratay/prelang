@@ -1,14 +1,26 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Keywords -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Keywords %></h1>
+</div>
 
-<p>
-  <strong>Titre:</strong>
-  <%= @keyword.titre %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:titre) %></dt>
+      <dd><pre class="prettyprint"><%= @keywords.titre %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:assigned_articles) %></dt>
+      <dd><pre class="prettyprint"><%= @keywords.assigned_articles %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Assigned articles:</strong>
-  <%= @keyword.assigned_articles %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              keywords_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_keywords_path(@keywords), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              keywords_path(@keywords),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<%= link_to 'Edit', edit_keyword_path(@keyword) %> |
-<%= link_to 'Back', keywords_path %>
