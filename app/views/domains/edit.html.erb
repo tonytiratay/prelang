@@ -1,6 +1,5 @@
-<h1>Editing domain</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @domain %> |
-<%= link_to 'Back', domains_path %>
+<%- model_class = Domain -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Domain %></h1>
+</div>
+<%= render :partial => 'form' %>
