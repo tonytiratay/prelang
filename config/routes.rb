@@ -1,4 +1,5 @@
 Prelang::Application.routes.draw do
+  get "landings/index"
   resources :articles do
   #->Prelang (voting/acts_as_votable)
   member do
