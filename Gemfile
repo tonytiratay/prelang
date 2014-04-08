@@ -43,3 +43,18 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'bundler'
+
+gem 'acts_as_votable'
+
+gem 'pry-rails', group: :development
+
+gem 'better_errors', group: :development
+
+gem 'binding_of_caller'
+
+gem 'delayed_job', github: 'collectiveidea/delayed_job'
+
+gem 'delayed_job_active_record', github: 'collectiveidea/delayed_job_active_record'
+
+gem 'validates_formatting_of'
