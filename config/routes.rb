@@ -1,4 +1,6 @@
 Prelang::Application.routes.draw do
+  resources :keywords
+
   resources :domains do
   #->Prelang (voting/acts_as_votable)
   member do
