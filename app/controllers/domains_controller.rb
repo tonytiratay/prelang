@@ -1,5 +1,5 @@
 class DomainsController < ApplicationController
-  before_action :set_domain, only: [:show, :edit, :update, :destroy]
+  before_action :set_domain, only: [:show, :edit, :update, :destroy, :vote]
 
   # GET /domains
   # GET /domains.json
